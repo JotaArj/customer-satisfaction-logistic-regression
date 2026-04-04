@@ -22,7 +22,7 @@ El proyecto incluye limpieza de datos, análisis exploratorio (EDA), ingeniería
 
 ## Dataset
 
-Fuente: ![Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 
+Fuente: ![Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 Variable objetivo: `satisfaction`  
 Las variables incluyen datos demográficos del cliente, valoraciones del servicio y métricas de interacción.
 
@@ -51,11 +51,29 @@ Herramientas y librerías utilizadas en el proyecto.
 
 ## Flujo del Proyecto
 
-1. Limpieza de datos  
-2. Análisis exploratorio de datos (EDA)  
-3. Ingeniería de variables  
-4. Entrenamiento del modelo (Logistic Regression)  
-5. Evaluación del modelo  
+olist-project-files\docs\3_Workflow.docx
+
+1. Limpieza de datos
+    olist-project-files\code\etl\final_data_olist.ipynb
+    olist-project-files\docs\1_Tablas_descripciones.xlsx
+
+2. Análisis exploratorio de datos (EDA)
+    olist-project-files\docs\1_Tablas_descripciones.xlsx
+    olist-project-files\code\exploration\analisis_descriptor_columns.py
+    olist-project-files\code\exploration\analysis.py
+    olist-project-files\code\etl\final_data_VISUALIZACION.ipynb
+
+3. Ingeniería de variables
+    olist-project-files\docs\2. Agrupación_ESTADOS_CATEGORÍAS.xlsx
+    olist-project-files\docs\4_Columnas_trasnformaciones_modelo.xlsx
+    olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb
+    
+4. Entrenamiento del modelo (Logistic Regression)
+    olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb
+
+5. Evaluación del modelo
+    olist-project-files\docs\4_Columnas_trasnformaciones_modelo.xlsx
+    olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb
 
 ---
 
@@ -66,23 +84,20 @@ Herramientas y librerías utilizadas en el proyecto.
 - Exploración de la importancia de variables
 - Detección de valores nulos y outliers
 
-*(Añade aquí visualizaciones del análisis)*
-
 ---
 
 ## Modelo
 
-Describe el modelo utilizado.
-
-Estructura de ejemplo:
-
 Modelo utilizado: **Logistic Regression**
+    olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb
+
 
 Pasos realizados:
 
 - División de datos en train/test
 - Escalado de variables
 - Entrenamiento del modelo
+- Ajuste de modelo y comparación.
 - Predicción
 
 ---
@@ -94,21 +109,10 @@ Explica cómo se evaluó el modelo.
 Métricas utilizadas:
 
 - Accuracy
-- Precision
-- Recall
-- F1-score
+- Sensibilidad
+- Especificidad (Valor que fue determinante para decidir sobre el modelo)
+- F1_score
 - ROC-AUC
-
-Añade aquí un resumen de resultados.
-
-Ejemplo:
-
-| Métrica | Valor |
-|------|------|
-| Accuracy | ... |
-| Precision | ... |
-| Recall | ... |
-| F1 Score | ... |
 
 ---
 
@@ -116,12 +120,5 @@ Ejemplo:
 
 Explica qué conclusiones se obtuvieron del análisis.
 
-Ejemplos:
-
-- Qué variables influyen más en la satisfacción
-- Patrones encontrados durante el EDA
-- Limitaciones del modelo
 
 ---
-
-## Estructura del Proyecto
