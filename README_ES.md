@@ -1,154 +1,243 @@
-# Predicción de Satisfacción del Cliente
+# 🚀 Predicción de Satisfacción del Cliente (Olist E-commerce)
 
-Proyecto de machine learning enfocado en predecir la satisfacción del cliente utilizando modelos de clasificación y análisis exploratorio de datos.
+## 🧠 Resumen Ejecutivo
 
-[Introduccion al Proyecto](olist-project-files\docs\0_Introduccion.docx)
+Proyecto de Machine Learning enfocado en predecir la satisfacción del cliente en un entorno real de e-commerce utilizando el dataset de Olist.
 
----
-
-## Descripción del Proyecto
-
-Este proyecto tiene como objetivo predecir si un cliente está satisfecho o no en función de diferentes variables relacionadas con el servicio.
-
-El proyecto incluye limpieza de datos, análisis exploratorio (EDA), ingeniería de variables y entrenamiento de un modelo de clasificación basado en **Logistic Regression** así como otros modelos de machine learning con la finalidad de hallar el mejor para nuestro objetivo.
-
-[Descripcion del Proyecto](olist-project-files\docs\0_Introduccion.docx)
+* 📊 Dataset: +100k pedidos reales
+* 🎯 Objetivo: Clasificar clientes satisfechos vs no satisfechos
+* 🤖 Modelos: Logistic Regression, KNN, Decision Tree, Gradient Boosting, XGBoost
+* 🏆 Mejor modelo: Logistic Regression
+* 🔑 Insight clave: El retraso en la entrega es el principal predictor de insatisfacción
+* 📈 Valor de negocio: Identificación temprana de clientes en riesgo para mejorar la retención
 
 ---
 
-## Objetivos
+## 📌 Descripción del Proyecto
 
-- Comprender los factores que influyen en la satisfacción del cliente
-- Explorar y limpiar el conjunto de datos
-- Evaluar el rendimiento del modelo
+Este proyecto analiza el comportamiento del cliente y el rendimiento del servicio para entender qué factores influyen en la satisfacción dentro de un entorno de e-commerce.
 
----
+Cubre todo el ciclo analítico:
 
-## Dataset
-
-Fuente: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-Variable objetivo: `satisfaction`  
-Las variables incluyen datos demográficos del cliente, valoraciones del servicio y métricas de interacción.
-
-![Estructura Datasets](olist-project-files\images\estructura_dataframes.png)
+* Preparación de datos (ETL)
+* Análisis exploratorio (EDA)
+* Ingeniería de variables
+* Entrenamiento y evaluación de modelos
+* Generación de insights orientados a negocio
 
 ---
 
-## Tecnologías Utilizadas
+## 🎯 Objetivos
 
-Herramientas y librerías utilizadas en el proyecto.
-
-- PowerBI
-- Python
-- Pandas
-- NumPy
-- Scikit-Learn
-- Matplotlib / Seaborn
-- Jupyter Notebook
-- Excel
-- Canvas
-- Visual Studio Code
-- Git
-
+* Identificar los factores clave que afectan la satisfacción del cliente
+* Construir y evaluar modelos de clasificación
+* Comparar diferentes enfoques de Machine Learning
+* Traducir resultados técnicos en decisiones de negocio
 
 ---
 
-## Flujo del Proyecto
+## 📊 Dataset
 
-(olist-project-files\docs\3_Workflow.docx)
+* Fuente: Olist Brazilian E-Commerce Dataset (Kaggle)
+* Tamaño: ~100k pedidos
+* Tipo: Datos transaccionales reales
 
-1. Limpieza de datos
-    [Script ETL](olist-project-files\code\etl\final_data_olist.ipynb)
-    [Descripcion de columnas del dataset](olist-project-files\docs\1_Tablas_descripciones.xlsx)
+**Variable objetivo:**
 
-2. Análisis exploratorio de datos (EDA)
-    [Script analisiis de columnas](olist-project-files\code\exploration\analisis_descriptor_columns.py)
-    [Script analisis datasets](olist-project-files\code\exploration\analysis.py)
-    [Script generador de dataset para dashboard](olist-project-files\code\etl\final_data_VISUALIZACION.ipynb)
-    [Dashboard Olist](olist-project-files\docs\dashboard_OLIST.pbix)
+* `satisfaction` (binaria)
 
-3. Ingeniería de variables
-    [Agrupacion de estados y categorias](olist-project-files\docs\2_Agrupación_ESTADOS_CATEGORÍAS.xlsx)
-    [Transformacion de columnas segun modelo (pagina 2 en adelante)](olist-project-files\docs\4_Columnas_transformaciones_modelo.xlsx)
-    [Script modelo Regresion logistica (incluye ajuste de dataset)](olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb)
-    
-4. Entrenamiento del modelo (Logistic Regression)
-    [Script Regresion logistica](olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb)
+**Principales variables:**
 
-5. Evaluación del modelo
-    [Evaluacion modelos (pagina 1)](olist-project-files\docs\4_Columnas_trasnformaciones_modelo.xlsx)
-    [Script modelo Regresion logistica](olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb)
+* Valoraciones de clientes
+* Tiempo de entrega
+* Características del pedido
+* Información del vendedor
 
 ---
 
-## Análisis Exploratorio de Datos
+## 🛠️ Tecnologías Utilizadas
 
-- Distribución de la variable objetivo
-- Análisis de correlaciones
-- Exploración de la importancia de variables
-- Detección de valores nulos y outliers
-
----
-
-## Modelos utilizados
-
-**Logistic Regression**
-    [Script Logistic Regression](olist-project-files\code\ml-scripts\logistic-regression\Regresion_Logistica_Olist.ipynb)
-
-**KNN**
-    [Script 1 KNN](olist-project-files\code\ml-scripts\KNN\1_KNN_binario.ipynb)
-    [Script 2 KNN](olist-project-files\code\ml-scripts\KNN\2_KNN_binario.ipynb)
-    [Script 3 KNN](olist-project-files\code\ml-scripts\KNN\3_KNN_binario.ipynb)
-    [Script 4 KNN](olist-project-files\code\ml-scripts\KNN\4_KNN_binario.ipynb)
-    [Script KNN Binario](olist-project-files\code\ml-scripts\KNN\KNN_1var_Olist.ipynb)
-    [Script KNN 3 variables](olist-project-files\code\ml-scripts\KNN\KNN_3var_Olist.ipynb)
-    [Script KNN 5 variables](olist-project-files\code\ml-scripts\KNN\KNN_5var_Olist.ipynb)
-
-**Gradient Boosting**
-    [Script Gradient Boosting binario](olist-project-files/code/ml-scripts/gradient-boosting/Gradient_Boosting_2var_Olist.ipynb)
-    [Script Gradient Boosting 3 variables](olist-project-files/code/ml-scripts/gradient-boosting/Gradient_Boosting_3var_Olist.ipynb)
-    [Script XGBoost](olist-project-files\code\ml-scripts\gradient-boosting\XGBoost_Olist.ipynb)
-
-**Decision Tree**
-    (Gradient_Boosting_3var_Olist.ipynb)
-    [Script Decision Tree](olist-project-files\code\ml-scripts\decision-tree\tree_model.ipynb)
+* Python (Pandas, NumPy, Scikit-learn)
+* Matplotlib / Seaborn
+* Power BI
+* Jupyter Notebooks
+* Excel
+* Git & GitHub
 
 ---
 
-## Evaluación del Modelo
+## 🧪 Estructura del Proyecto y Metodología
 
-Métricas utilizadas:
+El proyecto sigue un enfoque **iterativo y experimental**, con múltiples notebooks que exploran diferentes modelos y configuraciones de variables.
 
-- Accuracy
-- Sensibilidad
-- Especificidad (Valor que fue determinante para decidir sobre el modelo)
-- F1_score
-- ROC-AUC
+### Convención de Naming
 
-Como podemos observar, tenemos varios modelos con muy buenos resultados en algunos aspectos, pero el unico que realmente tenia unos valores aceptables en todas las metricas, en particular en especificidad fue en la regresion logistica
-
-![Mapa de calor de evaluación de modelos](olist-project-files\images\heatmap_resultados_modelos.jpg)
-![Tabla resultados de evaluación de modelos](olist-project-files\images\tabla_comparacion_modelos.jpeg)
+* `01_*` → Preparación de datos
+* `02_*` → Análisis exploratorio (EDA)
+* `03_*` → Modelado y experimentación
 
 ---
 
-## Resultados e Insights
+### 🔹 Preparación de Datos
 
-Tanto el resultado como el proceso aparece relatado en [Presentacion Olist](olist-project-files\docs\Presentacion_OLIST.pdf)
+* `01_data_preparation.ipynb`
+* `01_data_for_dashboard.ipynb`
 
-Se realizaron dos [dashboards](olist-project-files\docs\dashboard_OLIST.pbix) para poder interpretar y exponer los datos
+Incluye:
 
-![Dashboard General](olist-project-files/images/dashboard_global_image.jpg)
-![Dashboard Retraso](olist-project-files/images/dashboard_retraso_image.jpg)
+* Limpieza y unión de datos
+* Tratamiento de valores nulos y outliers
+* Generación del dataset final
 
-Tras analizar detenidamente los resultados, podemos observar que la valoracion habitual es de 5, y las unicas relaciones solidas fueron que el pedido no llego retrasado o que no se entrego, que mostraba una relacion bastante elevada.
+---
 
-Pudimos descartar que estuviera relacionado, o bien con el tamaño del envio, el tipo de producto, numero de productos, precio o localizacion del vendedor.
+### 🔹 Análisis Exploratorio (EDA)
 
-![pesos variables](olist-project-files\images\pesos_variables.jpg)
-![influencia retraso](olist-project-files\images\influencia_retraso.jpg)
-![influencia categorias](olist-project-files\images\influencia_categorias.jpg)
-![influencia categorias](olist-project-files\images\influencia_entrega.jpg)
+* `02_eda_general_analysis.py`
+* `02_eda_feature_distributions.py`
 
-Se podría obtener mejores resultados ampliando los datos, principalmente analizando los textos de las reviews en busca de los motivos de las valoraciones, ya sea bien por la adicion de keywords o bien por vectores semanticos para la correcta evaluacion de las razones de los usuarios.
+Incluye:
+
+* Análisis de la variable objetivo
+* Correlaciones
+* Exploración de variables
+* Validación de calidad de datos
+
+---
+
+### 🔹 Modelado
+
+#### Regresión Logística
+
+* `03_model_logistic_regression.ipynb`
+
+#### KNN (múltiples experimentos)
+
+* `03_model_knn_baseline.ipynb`
+* `03_model_knn_experiment_1.ipynb`
+* `03_model_knn_experiment_2.ipynb`
+* `03_model_knn_experiment_3.ipynb`
+* `03_model_knn_feature_1var.ipynb`
+* `03_model_knn_feature_3var.ipynb`
+* `03_model_knn_feature_5var.ipynb`
+
+#### Modelos de Árbol
+
+* `03_model_decision_tree.ipynb`
+
+#### Modelos Boosting
+
+* `03_model_gradient_boosting_2_features.ipynb`
+* `03_model_gradient_boosting_3_features.ipynb`
+* `03_model_xgboost.ipynb`
+
+👉 La existencia de múltiples notebooks refleja un proceso de **experimentación controlada con distintas configuraciones y variables**
+
+---
+
+## 🤖 Evaluación de Modelos
+
+Los modelos se evaluaron utilizando:
+
+* Accuracy
+* Recall (Sensibilidad)
+* Specificity ⚠️ *(métrica clave en este proyecto)*
+* F1-score
+* ROC-AUC
+
+### 🏆 Modelo Final: Logistic Regression
+
+Seleccionado por:
+
+* Mejor equilibrio global entre métricas
+* Alta especificidad → reduce falsos positivos
+
+👉 Esto es clave para evitar clasificar erróneamente clientes satisfechos como insatisfechos.
+
+---
+
+## 📈 Resultados
+
+![Comparación de modelos](olist-project-files/images/model_comparison_heatmap.jpg)
+
+* Algunos modelos maximizan accuracy pero fallan en otras métricas
+* Logistic Regression presenta el comportamiento más estable
+
+---
+
+## 🔍 Insights Clave
+
+* 🚚 **El retraso en la entrega es el principal driver de insatisfacción**
+* ⭐ Las valoraciones están muy concentradas en valores altos (dataset desbalanceado)
+* 📦 Variables como precio, categoría o tamaño del pedido tienen bajo impacto
+* ❌ Entregas tardías o fallidas están fuertemente correlacionadas con malas valoraciones
+
+---
+
+## 📊 Visualización (Power BI)
+
+Se desarrollaron dos dashboards:
+
+* Visión general del negocio
+* Análisis de retrasos en la entrega
+
+![Dashboard general](olist-project-files/images/dashboard_overview.jpg)
+![Dashboard retrasos](olist-project-files/images/dashboard_delay_analysis.jpg)
+
+---
+
+## ⚠️ Limitaciones
+
+* Dataset desbalanceado (predominio de valoraciones positivas)
+* No se han utilizado datos textuales (reviews)
+* Limitación en la profundidad de variables
+* Posibles mejoras mediante técnicas de NLP
+
+---
+
+## 🚀 Mejoras Futuras
+
+* Incorporar análisis de texto (NLP)
+* Uso de embeddings semánticos
+* Optimización de hiperparámetros
+* Técnicas de balanceo (SMOTE, etc.)
+* Pipeline automatizado de entrenamiento
+
+---
+
+## ▶️ Cómo ejecutar el proyecto
+
+```bash id="4w2zqz"
+git clone <repository_url>
+cd <repository>
+pip install -r requirements.txt
+```
+
+Ejecutar notebooks en orden:
+
+1. `01_*` → Preparación de datos
+2. `02_*` → EDA
+3. `03_*` → Modelado
+
+---
+
+## 📁 Recursos adicionales
+
+* Documentación disponible en `/docs`
+* Dashboard en `/reports`
+* Dataset original en Kaggle
+
+---
+
+## 💡 Conclusión
+
+Este proyecto demuestra la capacidad de:
+
+* Trabajar con datos reales complejos
+* Realizar análisis end-to-end
+* Construir y evaluar modelos de Machine Learning
+* Extraer insights con impacto en negocio
+
+El principal valor reside en identificar los factores críticos que afectan la satisfacción del cliente, permitiendo tomar decisiones basadas en datos.
+
 ---
