@@ -6,12 +6,9 @@ Proyecto de machine learning enfocado en predecir la satisfacción del cliente u
 
 ## Descripción del Proyecto
 
-Breve explicación del proyecto.
+Este proyecto tiene como objetivo predecir si un cliente está satisfecho o no en función de diferentes variables relacionadas con el servicio.
 
-Ejemplo de estructura (rellénalo con tu caso):
-
-Este proyecto tiene como objetivo predecir si un cliente está satisfecho o no en función de diferentes variables relacionadas con el servicio.  
-El análisis incluye limpieza de datos, análisis exploratorio (EDA), ingeniería de variables y entrenamiento de un modelo de clasificación basado en **Logistic Regression**.
+El proyecto incluye limpieza de datos, análisis exploratorio (EDA), ingeniería de variables y entrenamiento de un modelo de clasificación basado en **Logistic Regression** así como otros modelos de machine learning con la finalidad de hallar el mejor para nuestro objetivo.
 
 ---
 
@@ -19,28 +16,17 @@ El análisis incluye limpieza de datos, análisis exploratorio (EDA), ingenierí
 
 - Comprender los factores que influyen en la satisfacción del cliente
 - Explorar y limpiar el conjunto de datos
-- Construir un modelo de clasificación
 - Evaluar el rendimiento del modelo
 
 ---
 
 ## Dataset
 
-Describe el dataset.
-
-Ejemplo de estructura:
-
-- Fuente:
-- Número de registros:
-- Número de variables:
-- Variable objetivo:
-- Tipo de datos (encuesta, transaccional, etc.)
-
-Ejemplo:
-
-Fuente: [origen del dataset]  
+Fuente: ![Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) 
 Variable objetivo: `satisfaction`  
 Las variables incluyen datos demográficos del cliente, valoraciones del servicio y métricas de interacción.
+
+![Estructura Datasets](https://i.imgur.com/HRhd2Y0.png)
 
 ---
 
@@ -48,18 +34,22 @@ Las variables incluyen datos demográficos del cliente, valoraciones del servici
 
 Herramientas y librerías utilizadas en el proyecto.
 
+- PowerBI
 - Python
 - Pandas
 - NumPy
 - Scikit-Learn
 - Matplotlib / Seaborn
 - Jupyter Notebook
+- Excel
+- Canvas
+- Visual Studio Code
+- Git
+
 
 ---
 
 ## Flujo del Proyecto
-
-Explicación breve del pipeline de trabajo.
 
 1. Limpieza de datos  
 2. Análisis exploratorio de datos (EDA)  
@@ -70,10 +60,6 @@ Explicación breve del pipeline de trabajo.
 ---
 
 ## Análisis Exploratorio de Datos
-
-Describe los pasos principales del análisis.
-
-Ejemplo:
 
 - Distribución de la variable objetivo
 - Análisis de correlaciones
