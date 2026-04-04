@@ -1,243 +1,168 @@
-# 🚀 Predicción de Satisfacción del Cliente (Olist E-commerce)
+# Predicción de Satisfacción del Cliente – Olist E-commerce
 
-## 🧠 Resumen Ejecutivo
-
-Proyecto de Machine Learning enfocado en predecir la satisfacción del cliente en un entorno real de e-commerce utilizando el dataset de Olist.
-
-* 📊 Dataset: +100k pedidos reales
-* 🎯 Objetivo: Clasificar clientes satisfechos vs no satisfechos
-* 🤖 Modelos: Logistic Regression, KNN, Decision Tree, Gradient Boosting, XGBoost
-* 🏆 Mejor modelo: Logistic Regression
-* 🔑 Insight clave: El retraso en la entrega es el principal predictor de insatisfacción
-* 📈 Valor de negocio: Identificación temprana de clientes en riesgo para mejorar la retención
+Proyecto de Machine Learning para predecir la satisfacción del cliente en e-commerce utilizando datos reales de Olist. Permite identificar clientes en riesgo de insatisfacción y generar insights accionables para mejorar la retención.  
 
 ---
 
-## 📌 Descripción del Proyecto
+## 🔹 Resumen Ejecutivo
 
-Este proyecto analiza el comportamiento del cliente y el rendimiento del servicio para entender qué factores influyen en la satisfacción dentro de un entorno de e-commerce.
-
-Cubre todo el ciclo analítico:
-
-* Preparación de datos (ETL)
-* Análisis exploratorio (EDA)
-* Ingeniería de variables
-* Entrenamiento y evaluación de modelos
-* Generación de insights orientados a negocio
+- **Dataset:** ~100k pedidos reales de Olist  
+- **Objetivo:** Clasificar clientes satisfechos vs no satisfechos  
+- **Modelos evaluados:** Logistic Regression, KNN, Decision Tree, Gradient Boosting, XGBoost  
+- **Mejor modelo:** Logistic Regression  
+- **Insight clave:** El retraso en la entrega es el principal predictor de insatisfacción  
+- **Valor de negocio:** Identificación temprana de clientes insatisfechos para mejorar la retención  
 
 ---
 
-## 🎯 Objetivos
+## 🔹 Objetivos del Proyecto
 
-* Identificar los factores clave que afectan la satisfacción del cliente
-* Construir y evaluar modelos de clasificación
-* Comparar diferentes enfoques de Machine Learning
-* Traducir resultados técnicos en decisiones de negocio
-
----
-
-## 📊 Dataset
-
-* Fuente: Olist Brazilian E-Commerce Dataset (Kaggle)
-* Tamaño: ~100k pedidos
-* Tipo: Datos transaccionales reales
-
-**Variable objetivo:**
-
-* `satisfaction` (binaria)
-
-**Principales variables:**
-
-* Valoraciones de clientes
-* Tiempo de entrega
-* Características del pedido
-* Información del vendedor
+1. Identificar factores que afectan la satisfacción del cliente  
+2. Construir y evaluar modelos de clasificación  
+3. Comparar diferentes enfoques de Machine Learning  
+4. Traducir resultados técnicos en decisiones de negocio  
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🔹 Dataset
 
-* Python (Pandas, NumPy, Scikit-learn)
-* Matplotlib / Seaborn
-* Power BI
-* Jupyter Notebooks
-* Excel
-* Git & GitHub
+- **Fuente:** [Olist Brazilian E-Commerce Dataset (Kaggle)](https://www.kaggle.com/olistbr/brazilian-ecommerce)  
+- **Tipo de datos:** Transaccionales reales  
+- **Variable objetivo:** `satisfaction` (binaria)  
+- **Principales variables:** valoraciones de clientes, tiempo de entrega, características del pedido, información del vendedor  
 
----
-
-## 🧪 Estructura del Proyecto y Metodología
-
-El proyecto sigue un enfoque **iterativo y experimental**, con múltiples notebooks que exploran diferentes modelos y configuraciones de variables.
-
-### Convención de Naming
-
-* `01_*` → Preparación de datos
-* `02_*` → Análisis exploratorio (EDA)
-* `03_*` → Modelado y experimentación
+![Estructura del dataset](04_IMAGES/data_model_structure.png)  
 
 ---
 
-### 🔹 Preparación de Datos
+## 🔹 Tecnologías Utilizadas
 
-* `01_data_preparation.ipynb`
-* `01_data_for_dashboard.ipynb`
-
-Incluye:
-
-* Limpieza y unión de datos
-* Tratamiento de valores nulos y outliers
-* Generación del dataset final
+- **Lenguaje y librerías:** Python (Pandas, NumPy, Scikit-learn), Matplotlib, Seaborn  
+- **Herramientas de visualización:** Power BI, Excel  
+- **Documentación y control de versiones:** Jupyter Notebooks, Git & GitHub  
 
 ---
 
-### 🔹 Análisis Exploratorio (EDA)
+## 🔹 Estructura del Proyecto
 
-* `02_eda_general_analysis.py`
-* `02_eda_feature_distributions.py`
-
-Incluye:
-
-* Análisis de la variable objetivo
-* Correlaciones
-* Exploración de variables
-* Validación de calidad de datos
+- 01_ETL/ # Preparación y limpieza de datos
+- 02_EDA/ # Análisis exploratorio (EDA)
+- 03_ML_MODELS/ # Modelos de ML
+- 04_IMAGES/ # Gráficos e imágenes para README y dashboard
+- 05_DOCS/ # Documentación y reportes finales
 
 ---
 
-### 🔹 Modelado
-
-#### Regresión Logística
-
-* `03_model_logistic_regression.ipynb`
-
-#### KNN (múltiples experimentos)
-
-* `03_model_knn_baseline.ipynb`
-* `03_model_knn_experiment_1.ipynb`
-* `03_model_knn_experiment_2.ipynb`
-* `03_model_knn_experiment_3.ipynb`
-* `03_model_knn_feature_1var.ipynb`
-* `03_model_knn_feature_3var.ipynb`
-* `03_model_knn_feature_5var.ipynb`
-
-#### Modelos de Árbol
-
-* `03_model_decision_tree.ipynb`
-
-#### Modelos Boosting
-
-* `03_model_gradient_boosting_2_features.ipynb`
-* `03_model_gradient_boosting_3_features.ipynb`
-* `03_model_xgboost.ipynb`
-
-👉 La existencia de múltiples notebooks refleja un proceso de **experimentación controlada con distintas configuraciones y variables**
 
 ---
 
-## 🤖 Evaluación de Modelos
+## 🔹 Notebooks Clave
 
-Los modelos se evaluaron utilizando:
-
-* Accuracy
-* Recall (Sensibilidad)
-* Specificity ⚠️ *(métrica clave en este proyecto)*
-* F1-score
-* ROC-AUC
-
-### 🏆 Modelo Final: Logistic Regression
-
-Seleccionado por:
-
-* Mejor equilibrio global entre métricas
-* Alta especificidad → reduce falsos positivos
-
-👉 Esto es clave para evitar clasificar erróneamente clientes satisfechos como insatisfechos.
+[01_data_preparation.ipynb](01_ETL/01_data_preparation.ipynb)
+[01_data_for_dashboard.ipynb](01_ETL/01_data_for_dashboard.ipynb)
+[02_eda_general_analysis.ipynb](02_EDA/02_eda_general_analysis.ipynb)
+[02_eda_feature_distributions.ipynb](02_EDA/02_eda_feature_distributions.ipynb)[03_model_logistic_regression.ipynb](03_ML_MODELS/03_model_logistic_regression.ipynb)
+[03_model_knn_baseline.ipynb](03_ML_MODELS/03_model_knn_baseline.ipynb)
+[03_model_decision_tree.ipynb](03_ML_MODELS/03_model_decision_tree.ipynb)
+[03_model_xgboost.ipynb](03_ML_MODELS/03_model_xgboost.ipynb)
+ 
 
 ---
 
-## 📈 Resultados
+## 🔹 Preparación de Datos (ETL)
 
-![Comparación de modelos](olist-project-files/images/model_comparison_heatmap.jpg)
+- Limpieza y unión de datasets transaccionales  
+- Tratamiento de valores nulos y outliers  
+- Generación de dataset final listo para análisis y modelado  
 
-* Algunos modelos maximizan accuracy pero fallan en otras métricas
-* Logistic Regression presenta el comportamiento más estable
-
----
-
-## 🔍 Insights Clave
-
-* 🚚 **El retraso en la entrega es el principal driver de insatisfacción**
-* ⭐ Las valoraciones están muy concentradas en valores altos (dataset desbalanceado)
-* 📦 Variables como precio, categoría o tamaño del pedido tienen bajo impacto
-* ❌ Entregas tardías o fallidas están fuertemente correlacionadas con malas valoraciones
+![ETL Overview](04_IMAGES/etl_overview.png)  
 
 ---
 
-## 📊 Visualización (Power BI)
+## 🔹 Análisis Exploratorio (EDA)
 
-Se desarrollaron dos dashboards:
+- Distribución de la variable objetivo  
+- Correlaciones y relaciones entre variables  
+- Validación de calidad de datos  
 
-* Visión general del negocio
-* Análisis de retrasos en la entrega
-
-![Dashboard general](olist-project-files/images/dashboard_overview.jpg)
-![Dashboard retrasos](olist-project-files/images/dashboard_delay_analysis.jpg)
-
----
-
-## ⚠️ Limitaciones
-
-* Dataset desbalanceado (predominio de valoraciones positivas)
-* No se han utilizado datos textuales (reviews)
-* Limitación en la profundidad de variables
-* Posibles mejoras mediante técnicas de NLP
+![EDA General](04_IMAGES/eda_overview.png)  
+![Distribución de Features](04_IMAGES/eda_feature_distributions.png)  
 
 ---
 
-## 🚀 Mejoras Futuras
+## 🔹 Modelado y Evaluación
 
-* Incorporar análisis de texto (NLP)
-* Uso de embeddings semánticos
-* Optimización de hiperparámetros
-* Técnicas de balanceo (SMOTE, etc.)
-* Pipeline automatizado de entrenamiento
+### Métricas utilizadas
+
+- Accuracy  
+- Recall (Sensibilidad)  
+- Specificity (clave para evitar falsos positivos)  
+- F1-score  
+- ROC-AUC  
+
+### Modelo Final: Logistic Regression
+
+- Mejor equilibrio entre métricas  
+- Alta **specificity** → reduce falsos positivos (clientes satisfechos clasificados como insatisfechos)  
+
+![Comparación de Modelos](04_IMAGES/model_comparison_heatmap.jpg)  
+![Resultados de Modelos](04_IMAGES/model_results_table.jpg)  
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+## 🔹 Insights Clave
 
-```bash id="4w2zqz"
-git clone <repository_url>
-cd <repository>
+- Retrasos en la entrega → principal driver de insatisfacción  
+- Valoraciones muy concentradas en valores altos (dataset desbalanceado)  
+- Variables como precio, categoría o tamaño tienen bajo impacto  
+- Entregas fallidas correlacionadas con malas valoraciones  
+
+![Importancia de variables](04_IMAGES/feature_importance.jpg)  
+![Impacto de retraso en entrega](04_IMAGES/delivery_delay_impact.jpg)  
+![Impacto por categoría](04_IMAGES/category_impact.jpg)  
+![Impacto del tiempo de entrega](04_IMAGES/delivery_time_impact.jpg)  
+
+---
+
+## 🔹 Visualización en Power BI
+
+- **Dashboard general:** visión global del negocio  
+- **Dashboard de retrasos:** análisis detallado de entregas tardías  
+
+![Dashboard General](04_IMAGES/dashboard_overview.jpg)  
+![Dashboard Retrasos](04_IMAGES/dashboard_delay_analysis.jpg)  
+
+---
+
+## 🔹 Limitaciones
+
+- Dataset desbalanceado (predominio de valoraciones positivas)  
+- No se ha utilizado información textual (reviews)  
+- Limitación en la profundidad de variables  
+- Posibles mejoras con NLP  
+
+---
+
+## 🔹 Mejoras Futuras
+
+- Incorporar análisis de texto (NLP) y embeddings semánticos  
+- Optimización de hiperparámetros  
+- Técnicas de balanceo (SMOTE, etc.)  
+- Pipeline automatizado de entrenamiento  
+
+---
+
+## 🔹 Cómo ejecutar el proyecto
+
+TODO
+REVISAR TODA LA EJECUCION PASO A PASO Y MODIFICAR
+
+download dataset from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
+
+```bash
+git clone https://github.com/JotaArj/customer-satisfaction-logistic-regression.git
+cd customer-satisfaction-logistic-regression
 pip install -r requirements.txt
+jupyter notebook
+
 ```
-
-Ejecutar notebooks en orden:
-
-1. `01_*` → Preparación de datos
-2. `02_*` → EDA
-3. `03_*` → Modelado
-
----
-
-## 📁 Recursos adicionales
-
-* Documentación disponible en `/docs`
-* Dashboard en `/reports`
-* Dataset original en Kaggle
-
----
-
-## 💡 Conclusión
-
-Este proyecto demuestra la capacidad de:
-
-* Trabajar con datos reales complejos
-* Realizar análisis end-to-end
-* Construir y evaluar modelos de Machine Learning
-* Extraer insights con impacto en negocio
-
-El principal valor reside en identificar los factores críticos que afectan la satisfacción del cliente, permitiendo tomar decisiones basadas en datos.
-
----
