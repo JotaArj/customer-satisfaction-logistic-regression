@@ -119,8 +119,6 @@ Este proyecto fue desarrollado en colaboración.
 - Correlaciones y relaciones entre variables  
 - Validación de calidad de datos  
 
-![Distribución de Features](04_IMAGES/feature_importance.jpg)  
-
 ---
 
 ## 🔹 Modelado y Evaluación

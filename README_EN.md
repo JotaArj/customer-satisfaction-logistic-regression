@@ -118,8 +118,6 @@ This project was developed collaboratively.
 - Distribution of the target variable  
 - Correlations and relationships between features  
 - Data quality validation  
- 
-![Feature Distributions](04_IMAGES/feature_importance.jpg)  
 
 ---
 
