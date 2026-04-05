@@ -1,16 +1,16 @@
+
 import pandas as pd
 import os
-import matplotlib.pyplot as plt
+from pathlib import Path
 
-# ==============================
 # CONFIGURACIONES
-# ==============================
 
-ruta = "db"
-output_folder = "analisis"
+BASE_DIR = Path(__file__).resolve().parent.parent
+ruta = BASE_DIR / "db" / "output"
+output_folder = "db/analysis"
 os.makedirs(output_folder, exist_ok=True)
 
-log_global_path = os.path.join(output_folder, "analisis_global.txt")
+log_global_path = os.path.join(output_folder, "general_analysis.txt")
 
 columnas_excluir_contiene = [
     "_id",
@@ -27,9 +27,7 @@ columnas_excluir_exactas = [
     "geolocation_lng"
 ]
 
-# ==============================
 # FUNCIONES
-# ==============================
 
 def check_column(col):
     col_lower = col.lower()
@@ -91,12 +89,12 @@ with open(log_global_path, "w", encoding="utf-8") as log:
         if archivo.endswith(".csv"):
             path_completo = os.path.join(ruta, archivo)
 
-            print(f"\n📂 Analizando archivo: {archivo}")
+            print(f"\nAnalizando archivo: {archivo}")
 
             df = pd.read_csv(path_completo)
             nombre_tabla = archivo.replace(".csv", "")
 
             analizar_tabla(df, nombre_tabla, log)
 
-print("\n✔️ Análisis completado. Archivo generado:")
+print("\nAnálisis completado. Archivo generado:")
 print(log_global_path)

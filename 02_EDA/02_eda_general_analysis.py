@@ -2,9 +2,13 @@ import pandas as pd
 import os
 import seaborn as sns
 import matplotlib.pyplot as plt
+from pathlib import Path
 
-output_folder = "analisis"
-ruta = "db"
+BASE_DIR = Path(__file__).resolve().parent.parent
+ruta = BASE_DIR / "db" / "output"
+archivo = BASE_DIR / "db" / "output" / "final_data.csv"
+output_folder = "db/analysis"
+
 columnas_excluir_contiene = ["_id",
            "date", 
            "timestamp"]    
@@ -99,7 +103,7 @@ def full_db():
 
             # Carpeta análisis
             nombre_tabla = archivo.replace(".csv", "")
-            carpeta_analisis = os.path.join("analisis", nombre_tabla)
+            carpeta_analisis = os.path.join("db/analysis", nombre_tabla)
             os.makedirs(carpeta_analisis, exist_ok=True)
 
             # Ruta texto
@@ -128,15 +132,15 @@ def full_db():
 
 
 def unique_file():
-    df = pd.read_csv("final_data.csv")
+    df = pd.read_csv(archivo)
     # Carpeta análisis
     nombre_tabla = "final_data"
-    carpeta_analisis = os.path.join("analisis", nombre_tabla)
+    carpeta_analisis = os.path.join("db/analysis", nombre_tabla)
     os.makedirs(carpeta_analisis, exist_ok=True)
     # Ruta texto
     txt_path = os.path.join(carpeta_analisis, f"{nombre_tabla}.txt")
     with open(txt_path, "w", encoding="utf-8") as log:
-        log.write(f"===== ANALISIS DE Final data =====\n")
+        log.write("===== ANALISIS DE Final data =====\n")
         log.write(f"Shape: {df.shape}\n\n")
         # NaNs en %
         log.write("Porcentaje de NaNs por columna:\n")
