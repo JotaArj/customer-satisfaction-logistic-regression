@@ -109,7 +109,7 @@ Este proyecto fue desarrollado en colaboración.
 - Tratamiento de valores nulos y outliers  
 - Generación de dataset final listo para análisis y modelado  
 
-![ETL Overview](04_IMAGES/dashboard_overview.png)  
+![ETL Overview](04_IMAGES/dashboard_overview.jpg)  
 
 ---
 
@@ -119,7 +119,7 @@ Este proyecto fue desarrollado en colaboración.
 - Correlaciones y relaciones entre variables  
 - Validación de calidad de datos  
 
-![Distribución de Features](04_IMAGES/feature_importance.png)  
+![Distribución de Features](04_IMAGES/feature_importance.jpg)  
 
 ---
 

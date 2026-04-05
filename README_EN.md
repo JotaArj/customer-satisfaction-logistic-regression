@@ -109,7 +109,7 @@ This project was developed collaboratively.
 - Handled missing values and outliers  
 - Generated final dataset ready for analysis and modeling  
 
-![ETL Overview](04_IMAGES/dashboard_overview.png)  
+![ETL Overview](04_IMAGES/dashboard_overview.jpg)  
 
 ---
 
@@ -119,7 +119,7 @@ This project was developed collaboratively.
 - Correlations and relationships between features  
 - Data quality validation  
  
-![Feature Distributions](04_IMAGES/feature_importance.png)  
+![Feature Distributions](04_IMAGES/feature_importance.jpg)  
 
 ---
 
