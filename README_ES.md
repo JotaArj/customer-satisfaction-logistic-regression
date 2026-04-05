@@ -24,6 +24,43 @@ Proyecto de Machine Learning para predecir la satisfacción del cliente en e-com
 
 ---
 
+## 🔹 Problema de Negocio
+
+En entornos de e-commerce, la satisfacción del cliente impacta directamente en:
+
+- Retención
+- Reputación de marca
+- Costes operativos (devoluciones, soporte)
+
+Este proyecto busca anticipar clientes insatisfechos antes de que dejen una mala valoración, permitiendo acciones proactivas como:
+
+- Seguimiento de pedidos críticos
+- Priorización logística
+- Intervención del equipo de atención al cliente
+
+---
+
+## 🔹 Contribución
+
+Este proyecto fue desarrollado en colaboración.  
+
+**Mi contribución principal incluye:**
+
+- Desarrollo del pipeline de preparación de datos (ETL)
+- Análisis exploratorio (EDA) y validación de calidad de datos
+- Implementación y evaluación de modelos de Machine Learning (GradientBoosting, XGBoost, KNN multiples variables)
+- Selección y ajuste del modelo final (Logistic Regression)
+- Generación de insights orientados a negocio (consensuada por todos los participantes)
+
+### Autores
+
+- Jacinto Arjona
+- Giada Ceresa
+- Carla López
+- Natalia Martinez
+
+---
+
 ## 🔹 Dataset
 
 - **Fuente:** [Olist Brazilian E-Commerce Dataset (Kaggle)](https://www.kaggle.com/olistbr/brazilian-ecommerce)  
@@ -53,19 +90,16 @@ Proyecto de Machine Learning para predecir la satisfacción del cliente en e-com
 
 ---
 
-
----
-
 ## 🔹 Notebooks Clave
 
-[01_data_preparation.ipynb](01_ETL/01_data_preparation.ipynb)
-[01_data_for_dashboard.ipynb](01_ETL/01_data_for_dashboard.ipynb)
-[02_eda_general_analysis.ipynb](02_EDA/02_eda_general_analysis.ipynb)
-[02_eda_feature_distributions.ipynb](02_EDA/02_eda_feature_distributions.ipynb)[03_model_logistic_regression.ipynb](03_ML_MODELS/03_model_logistic_regression.ipynb)
-[03_model_knn_baseline.ipynb](03_ML_MODELS/03_model_knn_baseline.ipynb)
-[03_model_decision_tree.ipynb](03_ML_MODELS/03_model_decision_tree.ipynb)
-[03_model_xgboost.ipynb](03_ML_MODELS/03_model_xgboost.ipynb)
- 
+- [01_data_preparation.ipynb](01_ETL/01_data_preparation.ipynb)
+- [01_data_for_dashboard.ipynb](01_ETL/01_data_for_dashboard.ipynb)
+- [02_eda_general_analysis.ipynb](02_EDA/02_eda_general_analysis.ipynb)
+- [02_eda_feature_distributions.ipynb](02_EDA/02_eda_feature_distributions.ipynb)
+- [03_model_logistic_regression.ipynb](03_ML_MODELS/- 03_model_logistic_regression.ipynb)
+- [03_model_knn_baseline.ipynb](03_ML_MODELS/03_model_knn_baseline.ipynb)
+- [03_model_decision_tree.ipynb](03_ML_MODELS/03_model_decision_tree.ipynb)
+- [03_model_xgboost.ipynb](03_ML_MODELS/03_model_xgboost.ipynb)
 
 ---
 
@@ -110,11 +144,22 @@ Proyecto de Machine Learning para predecir la satisfacción del cliente en e-com
 
 ---
 
+### Resultados del modelo final
+
+- Accuracy: 0.587
+- Recall: 0.594
+- Specificity: 0.577
+- ROC-AUC: 0.6274
+
+El modelo prioriza la reducción de falsos positivos, alineado con el objetivo de negocio.
+
+---
+
 ## 🔹 Insights Clave
 
 - Retrasos en la entrega → principal driver de insatisfacción  
 - Valoraciones muy concentradas en valores altos (dataset desbalanceado)  
-- Variables como precio, categoría o tamaño tienen bajo impacto  
+- Variables como precio o categoría muestran menor impacto relativo en comparación con variables logísticas, especialmente el tiempo de entrega.
 - Entregas fallidas correlacionadas con malas valoraciones  
 
 ![Importancia de variables](04_IMAGES/feature_importance.jpg)  
@@ -152,17 +197,31 @@ Proyecto de Machine Learning para predecir la satisfacción del cliente en e-com
 
 ---
 
-## 🔹 Cómo ejecutar el proyecto
+## 🔹 Cómo instalar el proyecto
 
-TODO
-REVISAR TODA LA EJECUCION PASO A PASO Y MODIFICAR
-
-download dataset from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
+Primero clonaremos el repositorio para posteriormente instalar las dependencias necesarias a traves de pip
 
 ```bash
 git clone https://github.com/JotaArj/customer-satisfaction-logistic-regression.git
 cd customer-satisfaction-logistic-regression
 pip install -r requirements.txt
-jupyter notebook
-
 ```
+
+- Descargar el dataset de [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
+- Descomprimir en la raiz del proyecto, creando la carpeta /db/raw/
+
+## 🔹 Ejecución del proyecto
+
+1. Ejecutar el pipeline de datos:
+
+- `01_ETL/01_data_preparation.ipynb`
+- `01_ETL/01_data_for_dashboard.ipynb`
+
+2. Análisis exploratorio (opcional):
+
+- `02_EDA/02_eda_general_analysis.py`
+- `02_EDA/02_eda_feature_distributions.py`
+
+3. Modelado:
+
+- `03_ML_MODELS/03_model_logistic_regression.ipynb`

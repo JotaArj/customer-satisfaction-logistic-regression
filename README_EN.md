@@ -1,243 +1,227 @@
-# 🚀 Customer Satisfaction Prediction (Olist E-commerce)
+# Customer Satisfaction Prediction – Olist E-commerce
 
-## 🧠 Executive Summary
-
-Machine Learning project focused on predicting customer satisfaction in a real-world e-commerce dataset (Olist).
-
-* 📊 Dataset: +100k real orders
-* 🎯 Goal: Classify satisfied vs unsatisfied customers
-* 🤖 Models: Logistic Regression, KNN, Decision Tree, Gradient Boosting, XGBoost
-* 🏆 Best model: Logistic Regression
-* 🔑 Key insight: Delivery delay is the strongest predictor of dissatisfaction
-* 📈 Business value: Early identification of at-risk customers to improve retention
+Machine Learning project to predict customer satisfaction in e-commerce using real Olist data. Helps identify at-risk customers and generate actionable insights to improve retention.  
 
 ---
 
-## 📌 Project Overview
+## 🔹 Executive Summary
 
-This project analyzes customer behavior and service performance to understand what drives satisfaction in an e-commerce environment.
-
-It covers the full data workflow:
-
-* Data preparation (ETL)
-* Exploratory Data Analysis (EDA)
-* Feature engineering
-* Model training and evaluation
-* Business-oriented insights and visualization
+- **Dataset:** ~100k real Olist orders  
+- **Objective:** Classify satisfied vs. dissatisfied customers  
+- **Evaluated Models:** Logistic Regression, KNN, Decision Tree, Gradient Boosting, XGBoost  
+- **Best Model:** Logistic Regression  
+- **Key Insight:** Delivery delay is the main predictor of dissatisfaction  
+- **Business Value:** Early identification of dissatisfied customers to improve retention  
 
 ---
 
-## 🎯 Objectives
+## 🔹 Project Objectives
 
-* Identify key drivers of customer satisfaction
-* Build and evaluate classification models
-* Compare multiple machine learning approaches
-* Translate technical results into actionable insights
-
----
-
-## 📊 Dataset
-
-* Source: Olist Brazilian E-Commerce Dataset (Kaggle)
-* Size: ~100k orders
-* Type: Real transactional data
-
-**Target variable:**
-
-* `satisfaction` (binary)
-
-**Key features include:**
-
-* Customer reviews
-* Delivery time
-* Order characteristics
-* Seller information
+1. Identify factors affecting customer satisfaction  
+2. Build and evaluate classification models  
+3. Compare different Machine Learning approaches  
+4. Translate technical results into business decisions  
 
 ---
 
-## 🛠️ Tech Stack
+## 🔹 Business Problem
 
-* Python (Pandas, NumPy, Scikit-learn)
-* Matplotlib / Seaborn
-* Power BI
-* Jupyter Notebooks
-* Excel
-* Git & GitHub
+In e-commerce, customer satisfaction directly impacts:
 
----
+- Retention  
+- Brand reputation  
+- Operational costs (returns, support)
 
-## 🧪 Project Structure & Methodology
+This project aims to anticipate dissatisfied customers before they leave negative feedback, enabling proactive actions such as:
 
-This project follows an **iterative experimental approach**, with multiple notebooks exploring different models and feature configurations.
-
-### Naming Convention
-
-* `01_*` → Data preparation
-* `02_*` → Exploratory Data Analysis
-* `03_*` → Modeling experiments
+- Monitoring critical orders  
+- Prioritizing logistics  
+- Customer service interventions  
 
 ---
 
-### 🔹 Data Preparation
+## 🔹 Contribution
 
-* `01_data_preparation.ipynb`
-* `01_data_for_dashboard.ipynb`
+This project was developed collaboratively.  
 
-Includes:
+**My main contributions include:**
 
-* Data cleaning and merging
-* Handling missing values and outliers
-* Final dataset generation
+- Development of the data preparation (ETL) pipeline  
+- Exploratory Data Analysis (EDA) and data quality validation  
+- Implementation and evaluation of Machine Learning models (GradientBoosting, XGBoost, KNN with multiple variables)  
+- Final model selection and tuning (Logistic Regression)  
+- Generation of business-oriented insights (consensual with all participants)  
 
----
+### Authors
 
-### 🔹 Exploratory Data Analysis
-
-* `02_eda_general_analysis.py`
-* `02_eda_feature_distributions.py`
-
-Includes:
-
-* Target distribution analysis
-* Correlation analysis
-* Feature exploration
-* Data quality checks
+- Jacinto Arjona  
+- Giada Ceresa  
+- Carla López  
+- Natalia Martinez  
 
 ---
 
-### 🔹 Modeling
+## 🔹 Dataset
 
-#### Logistic Regression
+- **Source:** [Olist Brazilian E-Commerce Dataset (Kaggle)](https://www.kaggle.com/olistbr/brazilian-ecommerce)  
+- **Data Type:** Real transactional data  
+- **Target Variable:** `satisfaction` (binary)  
+- **Key Features:** customer ratings, delivery time, order characteristics, seller information  
 
-* `03_model_logistic_regression.ipynb`
-
-#### KNN (multiple experiments)
-
-* `03_model_knn_baseline.ipynb`
-* `03_model_knn_experiment_1.ipynb`
-* `03_model_knn_experiment_2.ipynb`
-* `03_model_knn_experiment_3.ipynb`
-* `03_model_knn_feature_1var.ipynb`
-* `03_model_knn_feature_3var.ipynb`
-* `03_model_knn_feature_5var.ipynb`
-
-#### Tree-based Models
-
-* `03_model_decision_tree.ipynb`
-
-#### Boosting Models
-
-* `03_model_gradient_boosting_2_features.ipynb`
-* `03_model_gradient_boosting_3_features.ipynb`
-* `03_model_xgboost.ipynb`
-
-👉 Multiple notebooks reflect **controlled experimentation with different configurations and feature sets**
+![Dataset Structure](04_IMAGES/data_model_structure.png)  
 
 ---
 
-## 🤖 Model Evaluation
+## 🔹 Technologies Used
 
-Models were evaluated using:
-
-* Accuracy
-* Recall (Sensitivity)
-* Specificity ⚠️ *(key metric in this project)*
-* F1-score
-* ROC-AUC
-
-### 🏆 Final Model: Logistic Regression
-
-Selected due to:
-
-* Best overall balance across metrics
-* Strong specificity → reduces false positives
-
-👉 This is critical to avoid incorrectly flagging satisfied customers as dissatisfied.
+- **Languages & Libraries:** Python (Pandas, NumPy, Scikit-learn), Matplotlib, Seaborn  
+- **Visualization Tools:** Power BI, Excel  
+- **Documentation & Version Control:** Jupyter Notebooks, Git & GitHub  
 
 ---
 
-## 📈 Results
+## 🔹 Project Structure
 
-![Model comparison](olist-project-files/images/model_comparison_heatmap.jpg)
-
-* Some models achieve higher accuracy but fail in recall or specificity
-* Logistic Regression provides the most stable performance
-
----
-
-## 🔍 Key Insights
-
-* 🚚 **Delivery delay is the main driver of dissatisfaction**
-* ⭐ Ratings are heavily skewed toward maximum values (imbalanced dataset)
-* 📦 Product-related features (price, category, size) have low predictive power
-* ❌ Late or failed deliveries strongly correlate with negative reviews
+- 01_ETL/ # Data preparation and cleaning  
+- 02_EDA/ # Exploratory Data Analysis  
+- 03_ML_MODELS/ # ML models  
+- 04_IMAGES/ # Graphs and images for README and dashboard  
+- 05_DOCS/ # Documentation and final reports  
 
 ---
 
-## 📊 Visualization (Power BI)
+## 🔹 Key Notebooks
 
-Two dashboards were developed:
-
-* Business overview
-* Delivery delay analysis
-
-![Dashboard overview](olist-project-files/images/dashboard_overview.jpg)
-![Delay analysis](olist-project-files/images/dashboard_delay_analysis.jpg)
-
----
-
-## ⚠️ Limitations
-
-* Imbalanced dataset (majority positive ratings)
-* No use of textual review data
-* Limited feature depth for behavioral analysis
-* Potential improvement using NLP techniques
+- [01_data_preparation.ipynb](01_ETL/01_data_preparation.ipynb)  
+- [01_data_for_dashboard.ipynb](01_ETL/01_data_for_dashboard.ipynb)  
+- [02_eda_general_analysis.ipynb](02_EDA/02_eda_general_analysis.ipynb)  
+- [02_eda_feature_distributions.ipynb](02_EDA/02_eda_feature_distributions.ipynb)  
+- [03_model_logistic_regression.ipynb](03_ML_MODELS/- 03_model_logistic_regression.ipynb)  
+- [03_model_knn_baseline.ipynb](03_ML_MODELS/03_model_knn_baseline.ipynb)  
+- [03_model_decision_tree.ipynb](03_ML_MODELS/03_model_decision_tree.ipynb)  
+- [03_model_xgboost.ipynb](03_ML_MODELS/03_model_xgboost.ipynb)  
 
 ---
 
-## 🚀 Future Improvements
+## 🔹 Data Preparation (ETL)
 
-* Incorporate NLP on customer reviews
-* Use semantic embeddings
-* Hyperparameter tuning
-* Apply resampling techniques (SMOTE, etc.)
-* Build a production-ready pipeline
+- Cleaned and merged transactional datasets  
+- Handled missing values and outliers  
+- Generated final dataset ready for analysis and modeling  
+
+![ETL Overview](04_IMAGES/etl_overview.png)  
 
 ---
 
-## ▶️ How to Run
+## 🔹 Exploratory Data Analysis (EDA)
+
+- Distribution of the target variable  
+- Correlations and relationships between features  
+- Data quality validation  
+
+![EDA Overview](04_IMAGES/eda_overview.png)  
+![Feature Distributions](04_IMAGES/eda_feature_distributions.png)  
+
+---
+
+## 🔹 Modeling and Evaluation
+
+### Metrics Used
+
+- Accuracy  
+- Recall  
+- Specificity (key to avoid false positives)  
+- F1-score  
+- ROC-AUC  
+
+### Final Model: Logistic Regression
+
+- Best balance across metrics  
+- High **specificity** → reduces false positives (satisfied customers classified as dissatisfied)  
+
+![Model Comparison](04_IMAGES/model_comparison_heatmap.jpg)  
+![Model Results](04_IMAGES/model_results_table.jpg)  
+
+---
+
+### Final Model Results
+
+- Accuracy: 0.587  
+- Recall: 0.594  
+- Specificity: 0.577  
+- ROC-AUC: 0.6274  
+
+The model prioritizes minimizing false positives, aligned with business objectives.  
+
+---
+
+## 🔹 Key Insights
+
+- Delivery delays → main driver of dissatisfaction  
+- Ratings heavily skewed toward high values (dataset is imbalanced)  
+- Features like price or category have lower impact compared to logistic-related features, especially delivery time  
+- Failed deliveries correlate with negative ratings  
+
+![Feature Importance](04_IMAGES/feature_importance.jpg)  
+![Delivery Delay Impact](04_IMAGES/delivery_delay_impact.jpg)  
+![Impact by Category](04_IMAGES/category_impact.jpg)  
+![Delivery Time Impact](04_IMAGES/delivery_time_impact.jpg)  
+
+---
+
+## 🔹 Power BI Visualization
+
+- **General Dashboard:** overall business view  
+- **Delay Dashboard:** detailed analysis of late deliveries  
+
+![Dashboard Overview](04_IMAGES/dashboard_overview.jpg)  
+![Delay Analysis Dashboard](04_IMAGES/dashboard_delay_analysis.jpg)  
+
+---
+
+## 🔹 Limitations
+
+- Imbalanced dataset (predominantly positive ratings)  
+- No textual information (customer reviews) was used  
+- Limited depth of available features  
+- Potential improvement using NLP  
+
+---
+
+## 🔹 Future Improvements
+
+- Incorporate text analysis (NLP) and semantic embeddings  
+- Hyperparameter optimization  
+- Balancing techniques (e.g., SMOTE)  
+- Automated training pipeline  
+
+---
+
+## 🔹 How to Install the Project
+
+First, clone the repository and then install dependencies via pip:
 
 ```bash
-git clone <repository_url>
-cd <repository>
+git clone https://github.com/JotaArj/customer-satisfaction-logistic-regression.git
+cd customer-satisfaction-logistic-regression
 pip install -r requirements.txt
 ```
 
-Run notebooks in order:
+- Download the dataset from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data)
+- Extract it in the project root, creating the folder /db/raw/
 
-1. `01_*` → Data preparation
-2. `02_*` → EDA
-3. `03_*` → Modeling
+## 🔹 Project Execution
 
----
+1. Run the data pipeline:
 
-## 📁 Additional Resources
+- `01_ETL/01_data_preparation.ipynb`
+- `01_ETL/01_data_for_dashboard.ipynb`
 
-* Documentation files available in `/docs`
-* Dashboard available in `/reports`
-* Dataset available on Kaggle
+2. Exploratory analysis (optional):
 
----
+- `02_EDA/02_eda_general_analysis.py`
+- `02_EDA/02_eda_feature_distributions.py`
 
-## 💡 Conclusion
+3. Modeling:
 
-This project demonstrates the ability to:
-
-* Work with complex real-world datasets
-* Perform end-to-end data analysis
-* Build and evaluate machine learning models
-* Extract and communicate business insights
-
-The main value lies in identifying critical factors affecting customer satisfaction and enabling data-driven decision-making.
-
----
+- `03_ML_MODELS/03_model_logistic_regression.ipynb`
