@@ -96,7 +96,7 @@ This project was developed collaboratively.
 - [01_data_for_dashboard.ipynb](01_ETL/01_data_for_dashboard.ipynb)  
 - [02_eda_general_analysis.ipynb](02_EDA/02_eda_general_analysis.ipynb)  
 - [02_eda_feature_distributions.ipynb](02_EDA/02_eda_feature_distributions.ipynb)  
-- [03_model_logistic_regression.ipynb](03_ML_MODELS/- 03_model_logistic_regression.ipynb)  
+- [03_model_logistic_regression.ipynb](03_ML_MODELS/03_model_logistic_regression.ipynb)  
 - [03_model_knn_baseline.ipynb](03_ML_MODELS/03_model_knn_baseline.ipynb)  
 - [03_model_decision_tree.ipynb](03_ML_MODELS/03_model_decision_tree.ipynb)  
 - [03_model_xgboost.ipynb](03_ML_MODELS/03_model_xgboost.ipynb)  
@@ -109,7 +109,7 @@ This project was developed collaboratively.
 - Handled missing values and outliers  
 - Generated final dataset ready for analysis and modeling  
 
-![ETL Overview](04_IMAGES/etl_overview.png)  
+![ETL Overview](04_IMAGES/dashboard_overview.png)  
 
 ---
 
@@ -118,9 +118,8 @@ This project was developed collaboratively.
 - Distribution of the target variable  
 - Correlations and relationships between features  
 - Data quality validation  
-
-![EDA Overview](04_IMAGES/eda_overview.png)  
-![Feature Distributions](04_IMAGES/eda_feature_distributions.png)  
+ 
+![Feature Distributions](04_IMAGES/feature_importance.png)  
 
 ---
 
@@ -140,7 +139,7 @@ This project was developed collaboratively.
 - High **specificity** → reduces false positives (satisfied customers classified as dissatisfied)  
 
 ![Model Comparison](04_IMAGES/model_comparison_heatmap.jpg)  
-![Model Results](04_IMAGES/model_results_table.jpg)  
+![Model Results](04_IMAGES/model_results_table.jpeg)  
 
 ---
 
